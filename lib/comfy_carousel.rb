@@ -4,6 +4,7 @@ unless defined? ComfyCarousel::Application
 end
 
 [ 'comfy_carousel/configuration',
+  'comfy_carousel/routing',
   'comfy_carousel/form_builder'
 ].each do |path|
   require File.expand_path(path, File.dirname(__FILE__))
