@@ -11,7 +11,7 @@ class Carousel::Carousel < ActiveRecord::Base
     :presence => true
   validates :identifier,
     :presence => true,
-    :format   => { :with => /^\w[a-z0-9_-]*$/i }
+    :format   => { :with => /\A\w[a-z0-9_-]*\z/i, :multiline=>true }
     
   # -- Callbacks ------------------------------------------------------------
   before_validation :assign_label
