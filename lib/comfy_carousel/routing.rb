@@ -1,4 +1,4 @@
-module ComfyGallery::Routing
+module ComfyCarousel::Routing
 
   def self.admin
     Rails.application.routes.draw do
