@@ -44,7 +44,16 @@ class Admin::Carousel::CarouselsController < Admin::Carousel::BaseController
 protected
   
   def build_carousel
-    @carousel = Carousel::Carousel.new(params[:carousel])
+    @carousel = if params[:carousel]
+    Carousel::Carousel.new(carousel_params)
+    else
+      Carousel::Carousel.new
+    end
+  end
+  
+  private
+  def carousel_params
+    params.require(:carousel).permit(:identifier,:label,:dimensions)
   end
   
 end

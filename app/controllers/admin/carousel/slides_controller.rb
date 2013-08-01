@@ -61,4 +61,9 @@ protected
     redirect_to :action => :index
   end
   
+  private
+    def slide_params
+      params.require(:slide).permit()
+    end
+  
 end
