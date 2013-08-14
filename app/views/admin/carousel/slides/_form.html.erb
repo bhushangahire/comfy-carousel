@@ -3,7 +3,7 @@
 <%= form.text_field :url %>
 
 <% if @slide.file? && !@slide.new_record? %>
-  <%= form.simple_field 'Current Image' do %>
+  <%= form.default_field 'Current Image' do %>
     <%= image_tag @slide.file.url %>
   <% end %>
 <% end %>

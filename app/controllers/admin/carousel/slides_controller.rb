@@ -63,7 +63,7 @@ protected
   
   private
     def slide_params
-      params.require(:slide).permit()
+      params.require(:slide).permit(:content,:label,:url,:file)
     end
   
 end
